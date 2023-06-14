@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Display Onmouse click</title>
+    <body>
+        <div class="gallery">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-6"><img class="img-fluid" src="https://admin.umt.edu.pk/Media/Site/SSC/SubSites/chemistry/FileManager/2023/june/14/Alumini%20Stories%20(1).png" onclick="openModal(this);" /></div>
+<div class="col-lg-4 col-md-4 col-sm-6"><img class="img-fluid" src="https://admin.umt.edu.pk/Media/Site/SSC/SubSites/chemistry/FileManager/2023/june/14/Alumini Stories (2).png" onclick="openModal(this);" /></div>
+<div class="col-lg-4 col-md-4 col-sm-6"><img class="img-fluid" src="https://admin.umt.edu.pk/Media/Site/SSC/SubSites/chemistry/FileManager/2023/june/14/Alumini Stories (3).png" onclick="openModal(this);" /></div>
+<div class="col-lg-4 col-md-4 col-sm-6"><img class="img-fluid" src="https://admin.umt.edu.pk/Media/Site/SSC/SubSites/chemistry/FileManager/2023/june/14/Alumini Stories (4).png" onclick="openModal(this);" /></div>
+<div class="col-lg-4 col-md-4 col-sm-6"><img class="img-fluid" src="https://admin.umt.edu.pk/Media/Site/SSC/SubSites/chemistry/FileManager/2023/june/14/Alumini Stories (5).png" onclick="openModal(this);" /></div>
+<div class="col-lg-4 col-md-4 col-sm-6"><img class="img-fluid" src="https://admin.umt.edu.pk/Media/Site/SSC/SubSites/chemistry/FileManager/2023/june/14/Alumini Stories.png" onclick="openModal(this);" /></div>
+</div>
+</div>
+<div id="modal"><span class="close" onclick="closeModal()">&times;</span> <img class="img-fluid" id="modal-image" /></div>
+<style><!--
+.gallery {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      /* width: 250px;
+      height: 250px; */
+      margin: 5px;
+      cursor: pointer;
+    }
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#modal-image {
+  display: block;
+  margin: 50px auto;
+  max-width: 60%;
+  max-height: 80%;
+}
+
+.close {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  cursor: pointer;
+}
+--></style>
+<script type="text/javascript">// <![CDATA[
+function openModal(img) {
+        var modal = document.getElementById('modal');
+        var modalImg = document.getElementById('modal-image');
+
+        modal.style.display = 'block';
+        modalImg.src = img.src;
+      }
+
+      function closeModal() {
+        var modal = document.getElementById('modal');
+        modal.style.display = 'none';
+      }
+// ]]></script>
+    </body>
+    </head>
+</html>
